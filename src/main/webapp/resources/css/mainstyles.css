@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+
+.buttonContainer
+{
+	width:100%;
+	border-color: green;
+}
+
+
+.pdfbutton
+{
+	margin: 0 auto;
+	
+}
