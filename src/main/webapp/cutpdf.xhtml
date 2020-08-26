@@ -10,10 +10,16 @@
 
 <h:body>
 
-	<div class="testfuck">
-		<h1>fuuuuuuuuuuuuck brooooooooooooo?????</h1>
-		<h2>what</h2>
-	</div>
+	<h:form enctype="multipart/form-data">
+		<p:fileUpload value="" mode="simple"
+			skinSimple="true" />
+		<br />
+		<p:commandButton value="Submit" ajax="false"
+			action=""/>
+	</h:form>
 
+	<p:button styleClass="pdfbutton" value="Cut PDF"
+		action="#{cutPDFBean.test}">
+	</p:button>
 </h:body>
 </html>
