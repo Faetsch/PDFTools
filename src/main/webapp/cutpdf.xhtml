@@ -9,17 +9,11 @@
 </h:head>
 
 <h:body>
-
-	<h:form enctype="multipart/form-data">
-		<p:fileUpload value="" mode="simple"
-			skinSimple="true" />
-		<br />
-		<p:commandButton value="Submit" ajax="false"
-			action=""/>
+	<h:form>
+		<p:commandButton styleClass="pdfbutton" value="Cut PDF"
+			action="#{cutPDFBean.test}">
+		</p:commandButton>
 	</h:form>
 
-	<p:button styleClass="pdfbutton" value="Cut PDF"
-		action="#{cutPDFBean.test}">
-	</p:button>
 </h:body>
 </html>

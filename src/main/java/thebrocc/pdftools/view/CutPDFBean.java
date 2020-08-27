@@ -2,20 +2,24 @@ package thebrocc.pdftools.view;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.List;
 
-import javax.enterprise.context.RequestScoped;
+import javax.annotation.PostConstruct;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 import org.apache.pdfbox.multipdf.Splitter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 
 
-@Named("cutPDFBean") @RequestScoped
-public class CutPDFBean
+@Named("cutPDFBean") @SessionScoped
+public class CutPDFBean implements Serializable
 {
+
+	private static final long serialVersionUID = 4562575047410592125L;
 	private PDDocument pdfFile;
 	private List<PDDocument> splitPdfs;
 	
@@ -56,23 +60,18 @@ public class CutPDFBean
 		}
 	}
 	
-	public void test()
+	public String test()
 	{
-		
+		System.out.println("cutting...");
 		URL resource = getClass().getResource("/Formblatt_5.pdf");
+		System.out.println(resource.getFile());
 		File f = null;
-		try 
-		{
-			f = new File(resource.toURI());
-		}
-		catch (URISyntaxException e) 
-		{
-			e.printStackTrace();
-		}
+		f = new File(resource.getFile());
 		
 		setPdfFile(f.getAbsolutePath());
 		splitPdfIntoSinglePages();
 		System.out.println("Amount of files: " + getSplitPdfs().size());
+		return "yehaw";
 	}
 	
 	public PDDocument getPdfFile()
