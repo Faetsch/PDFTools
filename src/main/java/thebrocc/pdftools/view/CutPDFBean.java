@@ -60,7 +60,7 @@ public class CutPDFBean implements Serializable
 		}
 	}
 	
-	public String test()
+	public void test()
 	{
 		System.out.println("cutting...");
 		URL resource = getClass().getResource("/Formblatt_5.pdf");
@@ -71,7 +71,6 @@ public class CutPDFBean implements Serializable
 		setPdfFile(f.getAbsolutePath());
 		splitPdfIntoSinglePages();
 		System.out.println("Amount of files: " + getSplitPdfs().size());
-		return "yehaw";
 	}
 	
 	public PDDocument getPdfFile()

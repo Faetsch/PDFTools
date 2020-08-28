@@ -5,37 +5,34 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title>PDF Tools</title>
-	<h:outputStylesheet name="css/mainstyles.css" />
 </h:head>
 
 <h:body>
-
-
+	<h:outputStylesheet name="css/mainstyles.css" />
 	<h1 style="margin-top: 0; text-align: center;">PDF Tools</h1>
 
-
-<div class="buttonContainer">
-	<p:panelGrid columns="3">
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-		<p:button styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
-		</p:button>
-	</p:panelGrid>
-</div>
+	<div class="buttonContainer">
+		<p:panelGrid columns="3">
+			<p:button id="pdfbuttoncut" styleClass="pdfbutton" outcome="cutpdf" value="Cut PDF">
+			</p:button>
+			<p:button id="pdfbuttonrotate" styleClass="pdfbutton" outcome="cutpdf" value="Rotate PDF">
+			</p:button>
+			<p:button styleClass="pdfbutton" outcome="cutpdf" value="Merge PDF">
+			</p:button>
+			<p:button styleClass="pdfbutton" outcome="cutpdf" value="Number pages in PDF">
+			</p:button>
+			<p:button styleClass="pdfbutton" outcome="cutpdf" value="??? PDF">
+			</p:button>
+			<p:button styleClass="pdfbutton" outcome="cutpdf" value="??? PDF">
+			</p:button>
+			<p:button styleClass="pdfbutton" outcome="cutpdf" value="??? PDF">
+			</p:button>
+			<p:button styleClass="pdfbutton" outcome="cutpdf" value="??? PDF">
+			</p:button>
+			<p:button styleClass="pdfbutton" outcome="cutpdf" value="??? PDF">
+			</p:button>
+		</p:panelGrid>
+	</div>
 
 
 </h:body>
